@@ -113,24 +113,70 @@ Four design choices, each of which I got wrong first and fixed from a measuremen
 
 ### What it actually did
 
-Parity, not improvement. Across runs in a correct environment the residual converged to roughly a
-no-op (60% vs 60% baseline, paired +2 −2 at 80k steps), which is the right safe answer for an agent
-that cannot find a real gain.
+A 1,016-episode run (361k environment steps) against the 026000 base, whose own baseline on the
+same 40 start poses is 60%:
 
-The open question is whether that is because **no gain exists** or because **the agent never had
-enough experience to find one**. Note these are RL rollout episodes — the robot's own attempts at
-the task, not the 51 recorded demonstrations that SmolVLA trains on. A 100k-step run is ~280 such
-attempts, where SAC on continuous control normally wants thousands. Every piece of evidence points
-at the sample budget: the only lever that changed the outcome was the update-to-data ratio, which
-is a sample-size symptom, and throughput is capped at ~35 env-steps/s by the frozen policy's
-forward pass.
+| RL episodes | success | lifted |
+| --- | --- | --- |
+| 0-99 | 35% | 44% |
+| 200-299 | 39% | 47% |
+| **400-499** | **45%** | **59%** |
+| 600-699 | 38% | 57% |
+| 800-899 | 16% | 39% |
+| 900-999 | 13% | 21% |
 
-One result worth recording for anyone attempting this on top of a large VLA: **residual RL here is
-bottlenecked by the frozen policy's forward pass, not by physics.** MuJoCo costs 4.4 ms/step and
-the base policy ~20 ms/step amortised, so a GPU only helps if it is not already busy — sharing a
-GPU with a training job gave 37 env-steps/s, barely better than the 35 on CPU. That reframes the
-cost model: the budget for residual RL on a VLA is set by inference throughput, and buying it means
-either a dedicated accelerator or a distilled base.
+and the periodic paired evaluations (deterministic policy, 20 rollouts, same start poses and same
+base-policy noise seeds in both arms):
+
+| step | residual | baseline | paired |
+| --- | --- | --- | --- |
+| 50k | 60% | 60% | +2 -2 |
+| 100k | 50% | 60% | +1 -3 |
+| 150k | 65% | 60% | +1 -0 |
+| 200k | 60% | 60% | +1 -1 |
+| 250k | 30% | 60% | +1 -7 |
+| 350k | 15% | 60% | +0 -9 |
+
+**It improves to roughly the baseline, then collapses.** The lift rate — the thing the residual was
+supposed to fix, since 76% of failures never get the cube off the table — climbs from 44% to 59%
+by episode 500, then falls to 21%. Entropy temperature had decayed to alpha = 0.004 by then, so
+exploration had effectively stopped and the critic kept drifting on an increasingly stale buffer.
+The learned correction at that point was 0.13 cm/step against a grasp that misses by 1-3 cm: an
+order of magnitude too small to matter.
+
+Two honest readings, and I cannot separate them with the data I have:
+
+- **The residual has nothing to add.** The base policy replays 50-step action chunks open-loop, so
+  by the time the residual can see a grasp error the trajectory for that chunk is already committed.
+  A per-step nudge bounded at 1 cm cannot re-plan an approach that is aimed 2 cm wrong. If that is
+  right, the fix is not RL on top — it is giving the base policy a shorter chunk, or letting the
+  residual act on the chunk rather than within it.
+- **It needs a stopping rule and I never gave it one.** There is a real window around episodes
+  400-500 where the lift rate is 15 points above where it started. Off-policy collapse after a good
+  window is a known failure mode with a known mitigation (early stopping on a periodic evaluation,
+  which I was already computing and not acting on). My checkpointing overwrote a single `agent.pt`
+  every 10k steps, so the policy from the good window no longer exists.
+
+The second is the more embarrassing one and the easier to fix. If I ran this again I would keep the
+best-by-evaluation checkpoint rather than the latest, and stop on a sustained decline.
+
+### What this cost, and what it would take
+
+Throughput is the binding constraint, and it is worth stating precisely because it changes the plan
+for anyone attempting residual RL on a large VLA. Per environment step, measured:
+
+| component | cost |
+| --- | --- |
+| frozen SmolVLA forward (1 per 50-step chunk, amortised) | ~20 ms |
+| MuJoCo physics | 4.3 ms |
+| 3-camera render (only needed on a chunk boundary) | 0.1 ms |
+
+**The frozen policy is 82% of the cost, not the simulator.** That has a counter-intuitive
+consequence: a GPU only helps if it is not already busy. Running the residual on a GPU that was
+concurrently training SmolVLA gave 37 env-steps/s, against 35 on a 16-core CPU — no gain at all,
+because the residual's forward pass queued behind the training kernels. The budget for residual RL
+on a VLA is set by inference throughput, so buying more of it means a dedicated accelerator, a
+distilled base policy, or a shorter action chunk.
 
 
 ---
