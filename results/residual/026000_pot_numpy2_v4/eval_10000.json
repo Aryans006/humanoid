@@ -1,0 +1,177 @@
+{
+  "residual": {
+    "success_rate": 0.2,
+    "n": 10,
+    "by_position": {
+      "P1": 0.5,
+      "P2": 0.0,
+      "P3": 0.5,
+      "P4": 0.0,
+      "P5": 0.0
+    }
+  },
+  "baseline": {
+    "success_rate": 0.1,
+    "n": 10,
+    "by_position": {
+      "P1": 0.0,
+      "P2": 0.0,
+      "P3": 0.5,
+      "P4": 0.0,
+      "P5": 0.0
+    }
+  },
+  "paired": {
+    "residual_only_wins": 1,
+    "baseline_only_wins": 0,
+    "both": 1,
+    "neither": 8
+  },
+  "rollouts": {
+    "residual": [
+      {
+        "success": true,
+        "position": "P1",
+        "lifted": true,
+        "start": 0,
+        "seed": 10000
+      },
+      {
+        "success": false,
+        "position": "P1",
+        "lifted": false,
+        "start": 1,
+        "seed": 10001
+      },
+      {
+        "success": false,
+        "position": "P2",
+        "lifted": false,
+        "start": 8,
+        "seed": 10008
+      },
+      {
+        "success": false,
+        "position": "P2",
+        "lifted": false,
+        "start": 9,
+        "seed": 10009
+      },
+      {
+        "success": true,
+        "position": "P3",
+        "lifted": true,
+        "start": 16,
+        "seed": 10016
+      },
+      {
+        "success": false,
+        "position": "P3",
+        "lifted": false,
+        "start": 17,
+        "seed": 10017
+      },
+      {
+        "success": false,
+        "position": "P4",
+        "lifted": false,
+        "start": 24,
+        "seed": 10024
+      },
+      {
+        "success": false,
+        "position": "P4",
+        "lifted": false,
+        "start": 25,
+        "seed": 10025
+      },
+      {
+        "success": false,
+        "position": "P5",
+        "lifted": false,
+        "start": 32,
+        "seed": 10032
+      },
+      {
+        "success": false,
+        "position": "P5",
+        "lifted": false,
+        "start": 33,
+        "seed": 10033
+      }
+    ],
+    "baseline": [
+      {
+        "success": false,
+        "position": "P1",
+        "lifted": false,
+        "start": 0,
+        "seed": 10000
+      },
+      {
+        "success": false,
+        "position": "P1",
+        "lifted": true,
+        "start": 1,
+        "seed": 10001
+      },
+      {
+        "success": false,
+        "position": "P2",
+        "lifted": false,
+        "start": 8,
+        "seed": 10008
+      },
+      {
+        "success": false,
+        "position": "P2",
+        "lifted": false,
+        "start": 9,
+        "seed": 10009
+      },
+      {
+        "success": true,
+        "position": "P3",
+        "lifted": true,
+        "start": 16,
+        "seed": 10016
+      },
+      {
+        "success": false,
+        "position": "P3",
+        "lifted": false,
+        "start": 17,
+        "seed": 10017
+      },
+      {
+        "success": false,
+        "position": "P4",
+        "lifted": false,
+        "start": 24,
+        "seed": 10024
+      },
+      {
+        "success": false,
+        "position": "P4",
+        "lifted": false,
+        "start": 25,
+        "seed": 10025
+      },
+      {
+        "success": false,
+        "position": "P5",
+        "lifted": false,
+        "start": 32,
+        "seed": 10032
+      },
+      {
+        "success": false,
+        "position": "P5",
+        "lifted": false,
+        "start": 33,
+        "seed": 10033
+      }
+    ]
+  },
+  "step": 10000
+}

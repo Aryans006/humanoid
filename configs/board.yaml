@@ -1,0 +1,18 @@
+# Table board: AprilTag GridBoard printed by tools/print_tags.py on one A4 sheet (landscape).
+dictionary: DICT_APRILTAG_36h11
+cols: 4             # markers along the page's long side (OpenCV markersX)
+rows: 3             # OpenCV markersY
+first_id: 0         # ids 0..11, row-major from the page's top-left tag
+# MEASURED after printing (meters). Measure across the whole board for accuracy:
+#   tag_size_m = black-square edge of one tag
+#   gap_m      = (left edge of tag 0 to right edge of tag 3  -  4 * tag_size_m) / 3
+# Nominal print values: tag 0.055, gap 0.015.
+tag_size_m: 0.05365
+  # from measurements.yaml 2026-10-03: printer scale 0.9754 (length-weighted over board spans, ChArUco span, scale bar)
+gap_m: 0.01463
+# Table frame W (the code builds T_W_board from the measured sizes; nothing to fill here):
+#   origin = bottom-left corner of tag 8's black square (board's bottom-left, page landscape)
+#   x along the board's bottom edge toward tag 11, y up the page toward tag 0, z up.
+# Every point on the board has x, y >= 0. OpenCV's own board frame (origin top-left of tag 0,
+# y down the page, z into the table) maps to W by T_W_board = [[1,0,0,0],[0,-1,0,H],[0,0,-1,0],
+# [0,0,0,1]] with H = rows * tag_size_m + (rows - 1) * gap_m.

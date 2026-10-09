@@ -1,0 +1,26 @@
+# Written by ego2libero/calib/calibrate.py (S0).
+# K_u: fx == fy and principal point at the image center (HaWoR assumes both).
+image_size: [1920, 1080]
+K:
+- [1344.478238, 0.0, 939.706156]
+- [0.0, 1344.478238, 531.09338]
+- [0.0, 0.0, 1.0]
+dist: [-0.001589, -0.01253604, 0.0, 0.0, 0.05431754]
+rms_px: 1.029
+K_u:
+- [1384.163136, 0.0, 960.0]
+- [0.0, 1384.163136, 540.0]
+- [0.0, 0.0, 1.0]
+charuco:
+  dictionary: DICT_5X5_100
+  squares: [7, 5]
+  square_m: 0.03511
+  marker_m: 0.02633
+  legacy_pattern: false
+calibrated_with:
+  clip: data/raw/2026-10-03_setup/calib.mp4
+  model: warped
+  board_warp_range_mm: 4.361727216007272
+  views: 60
+  capture: {width: 1920, height: 1080, fps: 60, lens: Google Pixel 10 25mm, shutter: 1
+      / 502.32553, iso: '3200', model: Google Pixel 10 25mm}

@@ -1,0 +1,1061 @@
+{
+  "task": "pick up the red cube and place it in the box",
+  "fps": 20,
+  "box_xy_L": [
+    0.1553969362438949,
+    0.03555236720723466
+  ],
+  "T_L_W": [
+    [
+      -1.0,
+      0.0,
+      0.0,
+      0.3272
+    ],
+    [
+      0.0,
+      -1.0,
+      0.0,
+      0.12858
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.8
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "grasp_wait": true,
+  "episodes": {
+    "demo_C026_r0": {
+      "demo": "demo_C026",
+      "repeat": 0,
+      "success": true,
+      "frames": 382,
+      "grasps": [
+        {
+          "frame": 110,
+          "reach_steps": 3,
+          "reason": "reached",
+          "tool_target_err_m": 0.00879220528859345,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.008856917136914763
+        }
+      ]
+    },
+    "demo_C027_r0": {
+      "demo": "demo_C027",
+      "repeat": 0,
+      "success": true,
+      "frames": 364,
+      "grasps": [
+        {
+          "frame": 110,
+          "reach_steps": 3,
+          "reason": "reached",
+          "tool_target_err_m": 0.008350429714438409,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.009376393419715905
+        }
+      ]
+    },
+    "demo_C028_r0": {
+      "demo": "demo_C028",
+      "repeat": 0,
+      "success": true,
+      "frames": 395,
+      "grasps": [
+        {
+          "frame": 129,
+          "reach_steps": 3,
+          "reason": "reached",
+          "tool_target_err_m": 0.008045836239127059,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.01121802050952903
+        }
+      ]
+    },
+    "demo_C029_r0": {
+      "demo": "demo_C029",
+      "repeat": 0,
+      "success": false,
+      "frames": 382,
+      "grasps": [
+        {
+          "frame": 168,
+          "reach_steps": 6,
+          "reason": "settled",
+          "tool_target_err_m": 0.048817718499009656,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.14331534014165168
+        }
+      ]
+    },
+    "demo_C030_r0": {
+      "demo": "demo_C030",
+      "repeat": 0,
+      "success": false,
+      "frames": 368,
+      "grasps": [
+        {
+          "frame": 82,
+          "reach_steps": 3,
+          "reason": "reached",
+          "tool_target_err_m": 0.008122782813636101,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.009149854976875616
+        }
+      ]
+    },
+    "demo_C031_r0": {
+      "demo": "demo_C031",
+      "repeat": 0,
+      "success": true,
+      "frames": 346,
+      "grasps": [
+        {
+          "frame": 101,
+          "reach_steps": 3,
+          "reason": "reached",
+          "tool_target_err_m": 0.008898898330606402,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.016293719177737597
+        }
+      ]
+    },
+    "demo_C032_r0": {
+      "demo": "demo_C032",
+      "repeat": 0,
+      "success": true,
+      "frames": 290,
+      "grasps": [
+        {
+          "frame": 73,
+          "reach_steps": 2,
+          "reason": "reached",
+          "tool_target_err_m": 0.008338419698094433,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.009698468504537367
+        }
+      ]
+    },
+    "demo_C033_r0": {
+      "demo": "demo_C033",
+      "repeat": 0,
+      "success": true,
+      "frames": 366,
+      "grasps": [
+        {
+          "frame": 121,
+          "reach_steps": 0,
+          "reason": "reached",
+          "tool_target_err_m": 0.00908665595394721,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.00936168850138277
+        }
+      ]
+    },
+    "demo_C034_r0": {
+      "demo": "demo_C034",
+      "repeat": 0,
+      "success": true,
+      "frames": 328,
+      "grasps": [
+        {
+          "frame": 60,
+          "reach_steps": 4,
+          "reason": "reached",
+          "tool_target_err_m": 0.00907118198384751,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.008917566978324383
+        }
+      ]
+    },
+    "demo_C035_r0": {
+      "demo": "demo_C035",
+      "repeat": 0,
+      "success": true,
+      "frames": 339,
+      "grasps": [
+        {
+          "frame": 92,
+          "reach_steps": 1,
+          "reason": "reached",
+          "tool_target_err_m": 0.007924485863037569,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.008256854603152508
+        }
+      ]
+    },
+    "demo_C036_r0": {
+      "demo": "demo_C036",
+      "repeat": 0,
+      "success": true,
+      "frames": 391,
+      "grasps": [
+        {
+          "frame": 118,
+          "reach_steps": 2,
+          "reason": "reached",
+          "tool_target_err_m": 0.007615240939331786,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.00904690070028729
+        }
+      ]
+    },
+    "demo_C037_r0": {
+      "demo": "demo_C037",
+      "repeat": 0,
+      "success": true,
+      "frames": 273,
+      "grasps": [
+        {
+          "frame": 68,
+          "reach_steps": 2,
+          "reason": "reached",
+          "tool_target_err_m": 0.009607142609761069,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.011076163404207048
+        }
+      ]
+    },
+    "demo_C038_r0": {
+      "demo": "demo_C038",
+      "repeat": 0,
+      "success": true,
+      "frames": 278,
+      "grasps": [
+        {
+          "frame": 65,
+          "reach_steps": 3,
+          "reason": "reached",
+          "tool_target_err_m": 0.007357449926209594,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.009570101641432455
+        }
+      ]
+    },
+    "demo_C039_r0": {
+      "demo": "demo_C039",
+      "repeat": 0,
+      "success": true,
+      "frames": 276,
+      "grasps": [
+        {
+          "frame": 37,
+          "reach_steps": 3,
+          "reason": "reached",
+          "tool_target_err_m": 0.009841760516890572,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.011376366350560886
+        }
+      ]
+    },
+    "demo_C040_r0": {
+      "demo": "demo_C040",
+      "repeat": 0,
+      "success": true,
+      "frames": 330,
+      "grasps": [
+        {
+          "frame": 95,
+          "reach_steps": 4,
+          "reason": "reached",
+          "tool_target_err_m": 0.008345560371268441,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.01069422502118482
+        }
+      ]
+    },
+    "demo_C041_r0": {
+      "demo": "demo_C041",
+      "repeat": 0,
+      "success": true,
+      "frames": 360,
+      "grasps": [
+        {
+          "frame": 81,
+          "reach_steps": 0,
+          "reason": "reached",
+          "tool_target_err_m": 0.008054598076790351,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.009965309456291994
+        }
+      ]
+    },
+    "demo_C042_r0": {
+      "demo": "demo_C042",
+      "repeat": 0,
+      "success": true,
+      "frames": 312,
+      "grasps": [
+        {
+          "frame": 107,
+          "reach_steps": 0,
+          "reason": "reached",
+          "tool_target_err_m": 0.005002441329521674,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.004418342117380882
+        }
+      ]
+    },
+    "demo_C043_r0": {
+      "demo": "demo_C043",
+      "repeat": 0,
+      "success": true,
+      "frames": 274,
+      "grasps": [
+        {
+          "frame": 66,
+          "reach_steps": 0,
+          "reason": "reached",
+          "tool_target_err_m": 0.009158659968798308,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.0102279243087113
+        }
+      ]
+    },
+    "demo_C044_r0": {
+      "demo": "demo_C044",
+      "repeat": 0,
+      "success": true,
+      "frames": 313,
+      "grasps": [
+        {
+          "frame": 69,
+          "reach_steps": 0,
+          "reason": "reached",
+          "tool_target_err_m": 0.0074409880288003015,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.008607057309167953
+        }
+      ]
+    },
+    "demo_C045_r0": {
+      "demo": "demo_C045",
+      "repeat": 0,
+      "success": true,
+      "frames": 299,
+      "grasps": [
+        {
+          "frame": 83,
+          "reach_steps": 6,
+          "reason": "reached",
+          "tool_target_err_m": 0.008241980388811965,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.010337168082996116
+        }
+      ]
+    },
+    "demo_C046_r0": {
+      "demo": "demo_C046",
+      "repeat": 0,
+      "success": true,
+      "frames": 277,
+      "grasps": [
+        {
+          "frame": 92,
+          "reach_steps": 0,
+          "reason": "reached",
+          "tool_target_err_m": 0.009456440246445838,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.01025473811327093
+        }
+      ]
+    },
+    "demo_C047_r0": {
+      "demo": "demo_C047",
+      "repeat": 0,
+      "success": true,
+      "frames": 355,
+      "grasps": [
+        {
+          "frame": 101,
+          "reach_steps": 1,
+          "reason": "reached",
+          "tool_target_err_m": 0.009758266453187638,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.016291493418884355
+        }
+      ]
+    },
+    "demo_C048_r0": {
+      "demo": "demo_C048",
+      "repeat": 0,
+      "success": true,
+      "frames": 338,
+      "grasps": [
+        {
+          "frame": 84,
+          "reach_steps": 3,
+          "reason": "reached",
+          "tool_target_err_m": 0.007739206936536495,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.023313905550615965
+        }
+      ]
+    },
+    "demo_C049_r0": {
+      "demo": "demo_C049",
+      "repeat": 0,
+      "success": true,
+      "frames": 318,
+      "grasps": [
+        {
+          "frame": 49,
+          "reach_steps": 6,
+          "reason": "reached",
+          "tool_target_err_m": 0.009751114579868832,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.009591432278349344
+        }
+      ]
+    },
+    "demo_C050_r0": {
+      "demo": "demo_C050",
+      "repeat": 0,
+      "success": true,
+      "frames": 262,
+      "grasps": [
+        {
+          "frame": 56,
+          "reach_steps": 3,
+          "reason": "reached",
+          "tool_target_err_m": 0.00750368078567441,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.008871557639105543
+        }
+      ]
+    },
+    "demo_C051_r0": {
+      "demo": "demo_C051",
+      "repeat": 0,
+      "success": true,
+      "frames": 319,
+      "grasps": [
+        {
+          "frame": 69,
+          "reach_steps": 0,
+          "reason": "reached",
+          "tool_target_err_m": 0.007059016384871116,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.007588087912692789
+        }
+      ]
+    },
+    "demo_C052_r0": {
+      "demo": "demo_C052",
+      "repeat": 0,
+      "success": true,
+      "frames": 296,
+      "grasps": [
+        {
+          "frame": 40,
+          "reach_steps": 3,
+          "reason": "reached",
+          "tool_target_err_m": 0.008536142148305817,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.009726217227899812
+        }
+      ]
+    },
+    "demo_C053_r0": {
+      "demo": "demo_C053",
+      "repeat": 0,
+      "success": true,
+      "frames": 312,
+      "grasps": [
+        {
+          "frame": 63,
+          "reach_steps": 2,
+          "reason": "reached",
+          "tool_target_err_m": 0.008854495205687492,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.02611245204592546
+        }
+      ]
+    },
+    "demo_C054_r0": {
+      "demo": "demo_C054",
+      "repeat": 0,
+      "success": true,
+      "frames": 306,
+      "grasps": [
+        {
+          "frame": 96,
+          "reach_steps": 0,
+          "reason": "reached",
+          "tool_target_err_m": 0.003042244200237228,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.011954518529364995
+        }
+      ]
+    },
+    "demo_C055_r0": {
+      "demo": "demo_C055",
+      "repeat": 0,
+      "success": true,
+      "frames": 304,
+      "grasps": [
+        {
+          "frame": 53,
+          "reach_steps": 1,
+          "reason": "reached",
+          "tool_target_err_m": 0.009061625094457883,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.011576038946747361
+        }
+      ]
+    },
+    "demo_C056_r0": {
+      "demo": "demo_C056",
+      "repeat": 0,
+      "success": false,
+      "frames": 316,
+      "grasps": [
+        {
+          "frame": 60,
+          "reach_steps": 0,
+          "reason": "reached",
+          "tool_target_err_m": 0.007689194966470846,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.009666492847575776
+        }
+      ]
+    },
+    "demo_C057_r0": {
+      "demo": "demo_C057",
+      "repeat": 0,
+      "success": true,
+      "frames": 309,
+      "grasps": [
+        {
+          "frame": 81,
+          "reach_steps": 4,
+          "reason": "reached",
+          "tool_target_err_m": 0.009806842556194774,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.009702285973256347
+        }
+      ]
+    },
+    "demo_C058_r0": {
+      "demo": "demo_C058",
+      "repeat": 0,
+      "success": true,
+      "frames": 302,
+      "grasps": [
+        {
+          "frame": 73,
+          "reach_steps": 2,
+          "reason": "reached",
+          "tool_target_err_m": 0.008620533805620305,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.007689566151580292
+        }
+      ]
+    },
+    "demo_C059_r0": {
+      "demo": "demo_C059",
+      "repeat": 0,
+      "success": false,
+      "frames": 306,
+      "grasps": [
+        {
+          "frame": 83,
+          "reach_steps": 2,
+          "reason": "reached",
+          "tool_target_err_m": 0.009731213886347019,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.041335803623590926
+        }
+      ]
+    },
+    "demo_C060_r0": {
+      "demo": "demo_C060",
+      "repeat": 0,
+      "success": true,
+      "frames": 276,
+      "grasps": [
+        {
+          "frame": 57,
+          "reach_steps": 0,
+          "reason": "reached",
+          "tool_target_err_m": 0.009566515109061341,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.023808474346795158
+        }
+      ]
+    },
+    "demo_C061_r0": {
+      "demo": "demo_C061",
+      "repeat": 0,
+      "success": true,
+      "frames": 359,
+      "grasps": [
+        {
+          "frame": 103,
+          "reach_steps": 4,
+          "reason": "reached",
+          "tool_target_err_m": 0.009377513365528377,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.006898118181942989
+        }
+      ]
+    },
+    "demo_C062_r0": {
+      "demo": "demo_C062",
+      "repeat": 0,
+      "success": true,
+      "frames": 340,
+      "grasps": [
+        {
+          "frame": 115,
+          "reach_steps": 3,
+          "reason": "reached",
+          "tool_target_err_m": 0.008989128671623142,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.023696623631778487
+        }
+      ]
+    },
+    "demo_C063_r0": {
+      "demo": "demo_C063",
+      "repeat": 0,
+      "success": true,
+      "frames": 352,
+      "grasps": [
+        {
+          "frame": 100,
+          "reach_steps": 1,
+          "reason": "reached",
+          "tool_target_err_m": 0.007943693863399812,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.010261320102323819
+        }
+      ]
+    },
+    "demo_C064_r0": {
+      "demo": "demo_C064",
+      "repeat": 0,
+      "success": true,
+      "frames": 276,
+      "grasps": [
+        {
+          "frame": 39,
+          "reach_steps": 6,
+          "reason": "settled",
+          "tool_target_err_m": 0.01405719154119789,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.03118275113801453
+        }
+      ]
+    },
+    "demo_C065_r0": {
+      "demo": "demo_C065",
+      "repeat": 0,
+      "success": true,
+      "frames": 215,
+      "grasps": [
+        {
+          "frame": 53,
+          "reach_steps": 0,
+          "reason": "reached",
+          "tool_target_err_m": 0.007529630926630238,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.007776749184399389
+        }
+      ]
+    },
+    "demo_C066_r0": {
+      "demo": "demo_C066",
+      "repeat": 0,
+      "success": true,
+      "frames": 308,
+      "grasps": [
+        {
+          "frame": 68,
+          "reach_steps": 6,
+          "reason": "settled",
+          "tool_target_err_m": 0.018478881051981637,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.017184150643138735
+        }
+      ]
+    },
+    "demo_C067_r0": {
+      "demo": "demo_C067",
+      "repeat": 0,
+      "success": false,
+      "frames": 351,
+      "grasps": [
+        {
+          "frame": 114,
+          "reach_steps": 6,
+          "reason": "settled",
+          "tool_target_err_m": 0.015343515328063056,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.016726212022747516
+        }
+      ]
+    },
+    "demo_C068_r0": {
+      "demo": "demo_C068",
+      "repeat": 0,
+      "success": true,
+      "frames": 280,
+      "grasps": [
+        {
+          "frame": 82,
+          "reach_steps": 6,
+          "reason": "settled",
+          "tool_target_err_m": 0.015709396833762466,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.01430532659593111
+        }
+      ]
+    },
+    "demo_C069_r0": {
+      "demo": "demo_C069",
+      "repeat": 0,
+      "success": false,
+      "frames": 330,
+      "grasps": [
+        {
+          "frame": 89,
+          "reach_steps": 6,
+          "reason": "settled",
+          "tool_target_err_m": 0.017918060046485686,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.02811147397923552
+        }
+      ]
+    },
+    "demo_C070_r0": {
+      "demo": "demo_C070",
+      "repeat": 0,
+      "success": true,
+      "frames": 345,
+      "grasps": [
+        {
+          "frame": 76,
+          "reach_steps": 6,
+          "reason": "settled",
+          "tool_target_err_m": 0.021532873894216344,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.021786457818813037
+        }
+      ]
+    },
+    "demo_C071_r0": {
+      "demo": "demo_C071",
+      "repeat": 0,
+      "success": true,
+      "frames": 314,
+      "grasps": [
+        {
+          "frame": 108,
+          "reach_steps": 0,
+          "reason": "reached",
+          "tool_target_err_m": 0.005392032948483784,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.006518875125723903
+        }
+      ]
+    },
+    "demo_C072_r0": {
+      "demo": "demo_C072",
+      "repeat": 0,
+      "success": true,
+      "frames": 323,
+      "grasps": [
+        {
+          "frame": 72,
+          "reach_steps": 6,
+          "reason": "settled",
+          "tool_target_err_m": 0.02078130348372006,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.026064448817825454
+        }
+      ]
+    },
+    "demo_C073_r0": {
+      "demo": "demo_C073",
+      "repeat": 0,
+      "success": true,
+      "frames": 305,
+      "grasps": [
+        {
+          "frame": 85,
+          "reach_steps": 6,
+          "reason": "settled",
+          "tool_target_err_m": 0.018154191931283273,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.0281519406415483
+        }
+      ]
+    },
+    "demo_C074_r0": {
+      "demo": "demo_C074",
+      "repeat": 0,
+      "success": true,
+      "frames": 288,
+      "grasps": [
+        {
+          "frame": 69,
+          "reach_steps": 6,
+          "reason": "settled",
+          "tool_target_err_m": 0.013992965091627283,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.016841701034588926
+        }
+      ]
+    },
+    "demo_C075_r0": {
+      "demo": "demo_C075",
+      "repeat": 0,
+      "success": true,
+      "frames": 286,
+      "grasps": [
+        {
+          "frame": 68,
+          "reach_steps": 3,
+          "reason": "reached",
+          "tool_target_err_m": 0.008410557092060348,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.008695182755066184
+        }
+      ]
+    },
+    "demo_C076_r0": {
+      "demo": "demo_C076",
+      "repeat": 0,
+      "success": true,
+      "frames": 275,
+      "grasps": [
+        {
+          "frame": 72,
+          "reach_steps": 0,
+          "reason": "reached",
+          "tool_target_err_m": 0.006906696655952612,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.007138035664624251
+        }
+      ]
+    },
+    "demo_C077_r0": {
+      "demo": "demo_C077",
+      "repeat": 0,
+      "success": true,
+      "frames": 293,
+      "grasps": [
+        {
+          "frame": 88,
+          "reach_steps": 6,
+          "reason": "settled",
+          "tool_target_err_m": 0.02173133974402695,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.03401056943757054
+        }
+      ]
+    },
+    "demo_C078_r0": {
+      "demo": "demo_C078",
+      "repeat": 0,
+      "success": true,
+      "frames": 308,
+      "grasps": [
+        {
+          "frame": 100,
+          "reach_steps": 6,
+          "reason": "settled",
+          "tool_target_err_m": 0.026237757760084416,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.025808756265072414
+        }
+      ]
+    },
+    "demo_C079_r0": {
+      "demo": "demo_C079",
+      "repeat": 0,
+      "success": true,
+      "frames": 278,
+      "grasps": [
+        {
+          "frame": 66,
+          "reach_steps": 6,
+          "reason": "settled",
+          "tool_target_err_m": 0.020447829106763266,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.025657933113043267
+        }
+      ]
+    },
+    "demo_C080_r0": {
+      "demo": "demo_C080",
+      "repeat": 0,
+      "success": true,
+      "frames": 332,
+      "grasps": [
+        {
+          "frame": 62,
+          "reach_steps": 6,
+          "reason": "settled",
+          "tool_target_err_m": 0.019199182776126793,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.02679438392682751
+        }
+      ]
+    },
+    "demo_C081_r0": {
+      "demo": "demo_C081",
+      "repeat": 0,
+      "success": true,
+      "frames": 290,
+      "grasps": [
+        {
+          "frame": 84,
+          "reach_steps": 2,
+          "reason": "reached",
+          "tool_target_err_m": 0.008687372187681466,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.006690417957083002
+        }
+      ]
+    },
+    "demo_C082_r0": {
+      "demo": "demo_C082",
+      "repeat": 0,
+      "success": true,
+      "frames": 299,
+      "grasps": [
+        {
+          "frame": 60,
+          "reach_steps": 6,
+          "reason": "settled",
+          "tool_target_err_m": 0.011787508699395854,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.013240903239337487
+        }
+      ]
+    },
+    "demo_C084_r0": {
+      "demo": "demo_C084",
+      "repeat": 0,
+      "success": true,
+      "frames": 261,
+      "grasps": [
+        {
+          "frame": 48,
+          "reach_steps": 6,
+          "reason": "settled",
+          "tool_target_err_m": 0.015310692215340368,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.02051166562929274
+        }
+      ]
+    },
+    "demo_C085_r0": {
+      "demo": "demo_C085",
+      "repeat": 0,
+      "success": true,
+      "frames": 277,
+      "grasps": [
+        {
+          "frame": 81,
+          "reach_steps": 0,
+          "reason": "reached",
+          "tool_target_err_m": 0.005310526655259462,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.0073872439130337805
+        }
+      ]
+    },
+    "demo_C086_r0": {
+      "demo": "demo_C086",
+      "repeat": 0,
+      "success": true,
+      "frames": 306,
+      "grasps": [
+        {
+          "frame": 77,
+          "reach_steps": 6,
+          "reason": "settled",
+          "tool_target_err_m": 0.02211056031232218,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.022680483030145065
+        }
+      ]
+    },
+    "demo_C087_r0": {
+      "demo": "demo_C087",
+      "repeat": 0,
+      "success": true,
+      "frames": 286,
+      "grasps": [
+        {
+          "frame": 52,
+          "reach_steps": 6,
+          "reason": "settled",
+          "tool_target_err_m": 0.02141610268745787,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.025978027536668995
+        }
+      ]
+    },
+    "demo_C088_r0": {
+      "demo": "demo_C088",
+      "repeat": 0,
+      "success": true,
+      "frames": 312,
+      "grasps": [
+        {
+          "frame": 86,
+          "reach_steps": 6,
+          "reason": "settled",
+          "tool_target_err_m": 0.018446197494271482,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.022203490631018098
+        }
+      ]
+    },
+    "demo_C089_r0": {
+      "demo": "demo_C089",
+      "repeat": 0,
+      "success": true,
+      "frames": 280,
+      "grasps": [
+        {
+          "frame": 56,
+          "reach_steps": 6,
+          "reason": "settled",
+          "tool_target_err_m": 0.024774969442865166,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.02850036626769558
+        }
+      ]
+    },
+    "demo_C090_r0": {
+      "demo": "demo_C090",
+      "repeat": 0,
+      "success": true,
+      "frames": 294,
+      "grasps": [
+        {
+          "frame": 78,
+          "reach_steps": 0,
+          "reason": "reached",
+          "tool_target_err_m": 0.003481770667264803,
+          "hold_steps": 10,
+          "tool_cube_dist_m": 0.005173368113855553
+        }
+      ]
+    }
+  }
+}

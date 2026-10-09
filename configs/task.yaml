@@ -1,0 +1,13 @@
+# OPEN DECISION (Aryan): exact task and goal region.
+# Goal region corners in W (meters, z = 0). W origin = bottom-left corner of tag 8; x along the
+# board's bottom edge toward tag 11, y toward tag 0 (see board.yaml).
+task: pick_and_place
+goal_region_W: null   # [[x, y], [x, y], [x, y], [x, y]]
+# Known-position check (known_pos clip): box center xy in W, meters, from measurements.yaml.
+# Each spot = where a sticky note's top end meets the baseline (board bottom edge extended).
+# Placement used when recording (2026-10-04): cube edge on the baseline, cube on the board's
+# (+y) side, cube center at the spot's x.
+known_spot_placement: edge_on_line
+known_spots_W:
+  - [0.300, 0.000]
+  - [0.400, 0.000]

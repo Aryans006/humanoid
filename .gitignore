@@ -1,0 +1,17 @@
+# virtualenvs (three of them: main, sim pins numpy<2, eval adds torch+lerobot)
+.venv/
+.venv-sim/
+.venv-eval/
+__pycache__/
+*.egg-info/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+
+# All recorded and derived data. Raw clips are ~9 GB, intermediates ~5 GB, sim episodes ~3 GB
+# and model checkpoints ~16 GB. Small result artifacts are copied into results/ instead.
+data/
+
+# remote scratch
+work/
+third_party/

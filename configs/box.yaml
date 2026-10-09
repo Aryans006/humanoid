@@ -1,0 +1,25 @@
+# Rigid box with one AprilTag (tag36h11) centered and edge-aligned on every face.
+# Box frame O: origin at geometric center, x/y/z along the edges, z up when the box stands
+# on its smallest face. Grasp width must stay < 0.08 m (Panda max opening).
+dictionary: DICT_APRILTAG_36h11
+# MEASURED after assembly (meters): edge lengths along x, y, z. Current box: paper cube folded
+# from tags/box_net_A4.pdf, 50 mm nominal (~48.8 mm at the 97.5% printer scale). Fill after building.
+dims_m: [0.050, 0.050, 0.050]  # ruler, 2026-10-04 (photo estimate was 50.5 +/- 1.5)
+# MEASURED black-square edge of the printed box tags (meters). Nominal 0.040 on the 50 mm cube net
+# (each tag needs >= 1/8 of its width of white border on every side). Fill after printing.
+tag_size_m: 0.03863  # effective size, fitted 2026-10-04 so the resting cube sits on the table in the
+# static + known_pos clips (k = 0.9904 vs ruler 39 mm, which only reads to 1 mm); validated on
+# demo_000-002 start/end windows: resting error went from -2 to -6 mm to within +/-2.5 mm
+# Tag id -> [outward face normal, direction the printed tag's TOP edge points].
+# Assembly: stand the box on a small face (any face for a cube). Stick 20, 22, 21, 23 upright on the four side
+# faces going counter-clockwise seen from above. 24 on top and 25 on the bottom, each with
+# its top edge pointing toward the face carrying 22.
+faces:
+  20: ["+x", "+z"]
+  22: ["+y", "+z"]
+  21: ["-x", "+z"]
+  23: ["-y", "+z"]
+  24: ["+z", "+y"]
+  25: ["-z", "+y"]
+# Optional per-tag T_O_G (4x4) from the box_refine clip; overrides the face-derived value.
+T_box_tag_overrides: {}

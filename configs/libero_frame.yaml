@@ -1,0 +1,30 @@
+# Where the table frame W sits in the simulator world L: p_L = T_L_W @ p_W.
+# Simple robosuite/LIBERO tabletop (table top z = 0.80 m, Panda base at x = -0.56 m).
+#
+# The placement is per session: it decides where the cube paths land relative to the Panda, and
+# the wrong patch of table costs centimetres of tracking because joint 6 hits its limit in a
+# top-down grasp. Sessions not listed here fall back to the top-level T_L_W.
+# Both entries below are tabletop_T_L_W(centre_W, rot_deg) from ego2libero/sim/frame.py: the
+# given point of W lands on the table centre and W's axes are turned by rot_deg about z.
+scene: robosuite_tabletop_red_cube
+
+# Default, chosen 2026-10-06 for the pilots: rot_deg = -90 about the pilots' cube-path middle
+# (W x 0.290, y 0.115), so W's y (toward tag 0, away from the person) becomes L's +x and the
+# person's side becomes the robot's side.
+T_L_W:
+  - [0.0,  1.0, 0.0, -0.115]
+  - [-1.0, 0.0, 0.0,  0.290]
+  - [0.0,  0.0, 1.0,  0.800]
+  - [0.0,  0.0, 0.0,  1.0]
+
+sessions:
+  # Chosen 2026-10-08 from the T_L_W sweep (data/processed/2026-10-07_dataset/tlw_best.json):
+  # rot_deg = 180 about this session's cube-path middle (W x 0.327, y 0.129). The default
+  # placement put these cubes at L y ~ -0.19 m, where a straight-down grasp drives Panda joint 6
+  # into its limit in ~99% of frames (3.5-5 cm tracking error); this one tracks to ~1.0 cm.
+  2026-10-07_dataset:
+    T_L_W:
+      - [-1.0,  0.0, 0.0,  0.327200]
+      - [ 0.0, -1.0, 0.0,  0.128580]
+      - [ 0.0,  0.0, 1.0,  0.800000]
+      - [ 0.0,  0.0, 0.0,  1.0]

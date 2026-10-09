@@ -1,0 +1,212 @@
+{
+  "checkpoint": "data/checkpoints/smolvla_cube2box_2026-10-07_dataset/checkpoints/022000/pretrained_model",
+  "session": "2026-10-07_dataset",
+  "T_L_W": [
+    [
+      0.0,
+      1.0,
+      0.0,
+      -0.115
+    ],
+    [
+      -1.0,
+      0.0,
+      0.0,
+      0.29
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.8
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "box_xy_L": [
+    -0.021972367207234667,
+    0.11819693624389487
+  ],
+  "max_steps": 400,
+  "wall_s": 182.0,
+  "success_rate": 0.5333,
+  "n": 15,
+  "by_position": {
+    "P1": {
+      "success": 1,
+      "n": 3
+    },
+    "P2": {
+      "success": 2,
+      "n": 3
+    },
+    "P3": {
+      "success": 1,
+      "n": 3
+    },
+    "P4": {
+      "success": 2,
+      "n": 3
+    },
+    "P5": {
+      "success": 2,
+      "n": 3
+    }
+  },
+  "rollouts": [
+    {
+      "success": false,
+      "success_step": null,
+      "steps": 400,
+      "max_cube_lift_m": 0.04001860515773337,
+      "final_cube_xy_err_m": 0.2162875301647063,
+      "position": "P1",
+      "clip": "demo_C066",
+      "wall_s": 14.3
+    },
+    {
+      "success": false,
+      "success_step": null,
+      "steps": 400,
+      "max_cube_lift_m": 0.038682890202758724,
+      "final_cube_xy_err_m": 0.2026585105758892,
+      "position": "P1",
+      "clip": "demo_C072",
+      "wall_s": 14.0
+    },
+    {
+      "success": true,
+      "success_step": 222,
+      "steps": 223,
+      "max_cube_lift_m": 0.13720368349182033,
+      "final_cube_xy_err_m": 0.00914068580805216,
+      "position": "P1",
+      "clip": "demo_C075",
+      "wall_s": 8.8
+    },
+    {
+      "success": true,
+      "success_step": 263,
+      "steps": 264,
+      "max_cube_lift_m": 0.13789385885364247,
+      "final_cube_xy_err_m": 0.03869284280220729,
+      "position": "P2",
+      "clip": "demo_C052",
+      "wall_s": 10.3
+    },
+    {
+      "success": false,
+      "success_step": null,
+      "steps": 400,
+      "max_cube_lift_m": 0.036534382072205274,
+      "final_cube_xy_err_m": 0.3087276705039631,
+      "position": "P2",
+      "clip": "demo_C056",
+      "wall_s": 14.0
+    },
+    {
+      "success": true,
+      "success_step": 258,
+      "steps": 259,
+      "max_cube_lift_m": 0.17723023037306274,
+      "final_cube_xy_err_m": 0.010739247654082027,
+      "position": "P2",
+      "clip": "demo_C060",
+      "wall_s": 10.2
+    },
+    {
+      "success": false,
+      "success_step": null,
+      "steps": 400,
+      "max_cube_lift_m": 0.02478448915956588,
+      "final_cube_xy_err_m": 0.31189106132033406,
+      "position": "P3",
+      "clip": "demo_C038",
+      "wall_s": 14.0
+    },
+    {
+      "success": false,
+      "success_step": null,
+      "steps": 400,
+      "max_cube_lift_m": 0.03123659152113878,
+      "final_cube_xy_err_m": 0.31681209239383407,
+      "position": "P3",
+      "clip": "demo_C039",
+      "wall_s": 13.9
+    },
+    {
+      "success": true,
+      "success_step": 234,
+      "steps": 235,
+      "max_cube_lift_m": 0.1501317648244218,
+      "final_cube_xy_err_m": 0.022546533638419877,
+      "position": "P3",
+      "clip": "demo_C041",
+      "wall_s": 9.0
+    },
+    {
+      "success": false,
+      "success_step": null,
+      "steps": 400,
+      "max_cube_lift_m": 0.026033502583702406,
+      "final_cube_xy_err_m": 0.24128974876572404,
+      "position": "P4",
+      "clip": "demo_C077",
+      "wall_s": 14.0
+    },
+    {
+      "success": true,
+      "success_step": 222,
+      "steps": 223,
+      "max_cube_lift_m": 0.16435465102201607,
+      "final_cube_xy_err_m": 0.01987005096607062,
+      "position": "P4",
+      "clip": "demo_C080",
+      "wall_s": 8.9
+    },
+    {
+      "success": true,
+      "success_step": 263,
+      "steps": 264,
+      "max_cube_lift_m": 0.16024326859257887,
+      "final_cube_xy_err_m": 0.007786467992313869,
+      "position": "P4",
+      "clip": "demo_C082",
+      "wall_s": 10.3
+    },
+    {
+      "success": true,
+      "success_step": 387,
+      "steps": 388,
+      "max_cube_lift_m": 0.15939357085972983,
+      "final_cube_xy_err_m": 0.008115519653043088,
+      "position": "P5",
+      "clip": "demo_C032",
+      "wall_s": 13.9
+    },
+    {
+      "success": false,
+      "success_step": null,
+      "steps": 400,
+      "max_cube_lift_m": 0.02478448915956588,
+      "final_cube_xy_err_m": 0.32756724591693437,
+      "position": "P5",
+      "clip": "demo_C034",
+      "wall_s": 14.0
+    },
+    {
+      "success": true,
+      "success_step": 313,
+      "steps": 314,
+      "max_cube_lift_m": 0.15454661081441057,
+      "final_cube_xy_err_m": 0.0007144531142891281,
+      "position": "P5",
+      "clip": "demo_C028",
+      "wall_s": 11.9
+    }
+  ]
+}

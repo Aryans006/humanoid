@@ -1,0 +1,317 @@
+{
+  "residual": {
+    "success_rate": 0.6,
+    "n": 20,
+    "by_position": {
+      "P1": 0.75,
+      "P2": 0.25,
+      "P3": 0.75,
+      "P4": 0.75,
+      "P5": 0.5
+    }
+  },
+  "baseline": {
+    "success_rate": 0.6,
+    "n": 20,
+    "by_position": {
+      "P1": 0.75,
+      "P2": 0.25,
+      "P3": 0.75,
+      "P4": 0.75,
+      "P5": 0.5
+    }
+  },
+  "paired": {
+    "residual_only_wins": 2,
+    "baseline_only_wins": 2,
+    "both": 10,
+    "neither": 6
+  },
+  "rollouts": {
+    "residual": [
+      {
+        "success": true,
+        "position": "P1",
+        "lifted": true,
+        "start": 0,
+        "seed": 10000
+      },
+      {
+        "success": false,
+        "position": "P1",
+        "lifted": true,
+        "start": 1,
+        "seed": 10001
+      },
+      {
+        "success": true,
+        "position": "P1",
+        "lifted": true,
+        "start": 2,
+        "seed": 10002
+      },
+      {
+        "success": true,
+        "position": "P1",
+        "lifted": true,
+        "start": 3,
+        "seed": 10003
+      },
+      {
+        "success": false,
+        "position": "P2",
+        "lifted": false,
+        "start": 8,
+        "seed": 10008
+      },
+      {
+        "success": true,
+        "position": "P2",
+        "lifted": true,
+        "start": 9,
+        "seed": 10009
+      },
+      {
+        "success": false,
+        "position": "P2",
+        "lifted": false,
+        "start": 10,
+        "seed": 10010
+      },
+      {
+        "success": false,
+        "position": "P2",
+        "lifted": false,
+        "start": 11,
+        "seed": 10011
+      },
+      {
+        "success": false,
+        "position": "P3",
+        "lifted": false,
+        "start": 16,
+        "seed": 10016
+      },
+      {
+        "success": true,
+        "position": "P3",
+        "lifted": true,
+        "start": 17,
+        "seed": 10017
+      },
+      {
+        "success": true,
+        "position": "P3",
+        "lifted": true,
+        "start": 18,
+        "seed": 10018
+      },
+      {
+        "success": true,
+        "position": "P3",
+        "lifted": true,
+        "start": 19,
+        "seed": 10019
+      },
+      {
+        "success": false,
+        "position": "P4",
+        "lifted": false,
+        "start": 24,
+        "seed": 10024
+      },
+      {
+        "success": true,
+        "position": "P4",
+        "lifted": true,
+        "start": 25,
+        "seed": 10025
+      },
+      {
+        "success": true,
+        "position": "P4",
+        "lifted": true,
+        "start": 26,
+        "seed": 10026
+      },
+      {
+        "success": true,
+        "position": "P4",
+        "lifted": true,
+        "start": 27,
+        "seed": 10027
+      },
+      {
+        "success": true,
+        "position": "P5",
+        "lifted": true,
+        "start": 32,
+        "seed": 10032
+      },
+      {
+        "success": false,
+        "position": "P5",
+        "lifted": false,
+        "start": 33,
+        "seed": 10033
+      },
+      {
+        "success": true,
+        "position": "P5",
+        "lifted": true,
+        "start": 34,
+        "seed": 10034
+      },
+      {
+        "success": false,
+        "position": "P5",
+        "lifted": false,
+        "start": 35,
+        "seed": 10035
+      }
+    ],
+    "baseline": [
+      {
+        "success": false,
+        "position": "P1",
+        "lifted": false,
+        "start": 0,
+        "seed": 10000
+      },
+      {
+        "success": true,
+        "position": "P1",
+        "lifted": true,
+        "start": 1,
+        "seed": 10001
+      },
+      {
+        "success": true,
+        "position": "P1",
+        "lifted": true,
+        "start": 2,
+        "seed": 10002
+      },
+      {
+        "success": true,
+        "position": "P1",
+        "lifted": true,
+        "start": 3,
+        "seed": 10003
+      },
+      {
+        "success": false,
+        "position": "P2",
+        "lifted": true,
+        "start": 8,
+        "seed": 10008
+      },
+      {
+        "success": true,
+        "position": "P2",
+        "lifted": true,
+        "start": 9,
+        "seed": 10009
+      },
+      {
+        "success": false,
+        "position": "P2",
+        "lifted": true,
+        "start": 10,
+        "seed": 10010
+      },
+      {
+        "success": false,
+        "position": "P2",
+        "lifted": false,
+        "start": 11,
+        "seed": 10011
+      },
+      {
+        "success": false,
+        "position": "P3",
+        "lifted": false,
+        "start": 16,
+        "seed": 10016
+      },
+      {
+        "success": true,
+        "position": "P3",
+        "lifted": true,
+        "start": 17,
+        "seed": 10017
+      },
+      {
+        "success": true,
+        "position": "P3",
+        "lifted": true,
+        "start": 18,
+        "seed": 10018
+      },
+      {
+        "success": true,
+        "position": "P3",
+        "lifted": true,
+        "start": 19,
+        "seed": 10019
+      },
+      {
+        "success": false,
+        "position": "P4",
+        "lifted": false,
+        "start": 24,
+        "seed": 10024
+      },
+      {
+        "success": true,
+        "position": "P4",
+        "lifted": true,
+        "start": 25,
+        "seed": 10025
+      },
+      {
+        "success": true,
+        "position": "P4",
+        "lifted": true,
+        "start": 26,
+        "seed": 10026
+      },
+      {
+        "success": true,
+        "position": "P4",
+        "lifted": true,
+        "start": 27,
+        "seed": 10027
+      },
+      {
+        "success": false,
+        "position": "P5",
+        "lifted": false,
+        "start": 32,
+        "seed": 10032
+      },
+      {
+        "success": false,
+        "position": "P5",
+        "lifted": false,
+        "start": 33,
+        "seed": 10033
+      },
+      {
+        "success": true,
+        "position": "P5",
+        "lifted": true,
+        "start": 34,
+        "seed": 10034
+      },
+      {
+        "success": true,
+        "position": "P5",
+        "lifted": true,
+        "start": 35,
+        "seed": 10035
+      }
+    ]
+  },
+  "step": 80000
+}

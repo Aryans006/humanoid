@@ -1,0 +1,61 @@
+# Measurement sheet. Fill in what you can, leave the rest as null, then tell Claude
+# "measurements done". Claude checks the numbers for consistency and writes them into configs/.
+#
+# Units: MILLIMETRES (not cm: 100 mm is written 100, not 10). Use calipers if you have them, otherwise a steel ruler, reading to 0.5 mm.
+# Measure the BLACK square of a tag: outer edge to outer edge of the black border, not the white margin.
+# See GUIDE.md, section 4, for pictures-in-words of each measurement.
+
+printer_check:
+  # Measure the "100 mm" scale bar printed on each sheet. If it isn't 100 +/- 0.5, the printer
+  # scaled the page: reprint at 100% / "Actual size" before measuring anything else.
+  board_sheet_bar_mm: 9.8
+  box_sheet_bar_mm: 9.8
+  charuco_sheet_bar_mm: 9.8
+
+board:
+  tag_edge_mm: 5.3        # one tag's black square, e.g. tag 8 (nominal 55)
+  bottom_row_span_mm: 25.8 # left edge of tag 8's black square -> right edge of tag 11's (nominal 265)
+  left_column_span_mm: 19 # bottom edge of tag 8 -> top edge of tag 0 (nominal 195)
+
+box_tags:
+  # NEW: paper cube folded from tags/box_net_A4.pdf. 40 mm nominal tags (about 39 mm at your
+  # printer's 97.5%). Measure each tag's black square in mm, flat, before folding.
+  tag_20_mm: 39   # ruler, 2026-10-04 (others assumed equal: same print)
+  tag_21_mm: null
+  tag_22_mm: null
+  tag_23_mm: null
+  tag_24_mm: null
+  tag_25_mm: null
+
+box:
+  # Folded cube, outside edge lengths in mm (nominal 50, about 48.8 at 97.5%).
+  # Each tag sits on the face it was printed on, so you only need the three edge lengths.
+  x_mm: 50                 # face with tag 21 -> face with tag 20 (ruler; cube)
+  y_mm: 50                 # face with tag 23 -> face with tag 22
+  z_mm: 50                 # bottom (tag 25) -> top (tag 24)
+  # Photo estimate (2 close-ups, board as reference): cube ~50.5 mm, tags ~39 mm. Ruler values still needed.
+  filled_with: none (hollow)  # grasp gently, near edges; watch the hand-box rigidity gate on pilots
+
+charuco:
+  seven_squares_mm: 24.6   # full long side: left edge of the first square -> right edge of the 7th (nominal 252)
+  marker_edge_mm: 2.7     # black square of one small marker inside a white square (nominal 27)
+
+known_spots:
+  # Two tape marks on the table for the known-position check (one dedicated clip).
+  # Coordinates in the table frame W, in mm: origin = bottom-left corner of tag 8,
+  # x along the board's bottom edge (toward tag 11), y toward tag 0. See GUIDE.md section 4.
+  # Spot = where each sticky note's top end meets the baseline (board bottom edge extended), at the
+  # note's middle. Ruler: 30 cm and 40 cm along the baseline. Photo check agrees within ~2 mm
+  # (data/interim/2026-10-03_setup/spot_check.jpg).
+  # Recorded with the cube's EDGE on the baseline (cube on the board side), centered on x.
+  spot_a_xy_mm: [300, 0]
+  spot_b_xy_mm: [400, 0]
+
+goal_region:
+  # OPEN DECISION. If you've taped a goal region: its 4 corners in W, mm, any order.
+  corners_xy_mm: null      # e.g. [[150, 20], [230, 20], [230, 100], [150, 100]]
+
+phone:
+  model: google pixel 10
+  app: Blackmagic Camera
+  notes: ""

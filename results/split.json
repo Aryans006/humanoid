@@ -1,0 +1,93 @@
+{
+  "train": [
+    "demo_C066_r0",
+    "demo_C072_r0",
+    "demo_C075_r0",
+    "demo_C074_r0",
+    "demo_C071_r0",
+    "demo_C065_r0",
+    "demo_C064_r0",
+    "demo_C070_r0",
+    "demo_C076_r0",
+    "demo_C052_r0",
+    "demo_C060_r0",
+    "demo_C063_r0",
+    "demo_C055_r0",
+    "demo_C057_r0",
+    "demo_C058_r0",
+    "demo_C054_r0",
+    "demo_C038_r0",
+    "demo_C039_r0",
+    "demo_C041_r0",
+    "demo_C053_r0",
+    "demo_C043_r0",
+    "demo_C047_r0",
+    "demo_C051_r0",
+    "demo_C042_r0",
+    "demo_C037_r0",
+    "demo_C044_r0",
+    "demo_C040_r0",
+    "demo_C050_r0",
+    "demo_C046_r0",
+    "demo_C077_r0",
+    "demo_C080_r0",
+    "demo_C082_r0",
+    "demo_C084_r0",
+    "demo_C085_r0",
+    "demo_C087_r0",
+    "demo_C089_r0",
+    "demo_C090_r0",
+    "demo_C078_r0",
+    "demo_C088_r0",
+    "demo_C086_r0",
+    "demo_C079_r0",
+    "demo_C081_r0",
+    "demo_C032_r0",
+    "demo_C034_r0",
+    "demo_C028_r0",
+    "demo_C027_r0",
+    "demo_C035_r0",
+    "demo_C033_r0",
+    "demo_C026_r0",
+    "demo_C031_r0",
+    "demo_C036_r0"
+  ],
+  "val": [],
+  "by_position": {
+    "P1": {
+      "train": 9,
+      "val": 0
+    },
+    "P2": {
+      "train": 7,
+      "val": 0
+    },
+    "P3": {
+      "train": 13,
+      "val": 0
+    },
+    "P4": {
+      "train": 13,
+      "val": 0
+    },
+    "P5": {
+      "train": 9,
+      "val": 0
+    }
+  },
+  "notes": [
+    "demo_C067 (P1) excluded: accepted=True sim_success=False",
+    "demo_C069 (P1) excluded: accepted=True sim_success=False",
+    "demo_C073 (P1) excluded: accepted=False sim_success=True",
+    "demo_C068 (P1) excluded: accepted=False sim_success=True",
+    "demo_C056 (P2) excluded: accepted=True sim_success=False",
+    "demo_C059 (P2) excluded: accepted=False sim_success=False",
+    "demo_C061 (P2) excluded: accepted=False sim_success=True",
+    "demo_C062 (P2) excluded: accepted=False sim_success=True",
+    "demo_C045 (P3) excluded: accepted=False sim_success=True",
+    "demo_C048 (P3) excluded: accepted=False sim_success=True",
+    "demo_C049 (P3) excluded: accepted=False sim_success=True",
+    "demo_C030 (P5) excluded: accepted=False sim_success=False",
+    "demo_C029 (P5) excluded: accepted=False sim_success=False"
+  ]
+}

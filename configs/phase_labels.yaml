@@ -1,0 +1,12 @@
+# Hand-marked phase onsets (FRAME numbers) for the phase-timing gate (plan: within +/-3 frames).
+# Open data/interim/<session>/<clip>/overlay.mp4 in a player that steps frame by frame; the frame
+# number is printed at the top left. For each demo, note the first frame where:
+#   grasp:     the fingers first touch the cube
+#   transport: the cube first leaves the table
+#   release:   the fingers let go of the cube
+#   retreat:   the hand starts moving away, after the cube has landed
+# Leave a value as null to skip it. Re-run: uv run python scripts/run_demo.py <session> <clip>
+2026-10-03_setup:
+  demo_000: {grasp: null, transport: null, release: null, retreat: null}
+  demo_001: {grasp: null, transport: null, release: null, retreat: null}
+  demo_002: {grasp: null, transport: null, release: null, retreat: null}

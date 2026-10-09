@@ -1,0 +1,14 @@
+# Copy to data/raw/<session>/session.yaml and fill in.
+date: null              # YYYY-MM-DD
+phone_model: null
+app: Blackmagic Camera
+resolution: [1920, 1080]
+fps: 60
+shutter: 1/500
+iso: null
+white_balance_k: null
+focus_locked: true
+stabilization: off
+lens: main 1x
+mount: null             # head_strap | tripod  (open decision)
+notes: ""

@@ -1,0 +1,29 @@
+[project]
+name = "ego2libero"
+version = "0.1.0"
+description = "Monocular egocentric pick-and-place videos -> metric, time-synced 6D trajectories in a table frame"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "opencv-contrib-python>=4.8",
+    "av>=11",
+    "pyyaml>=6",
+    "matplotlib>=3.7",
+    "tqdm>=4.65",
+]
+
+[dependency-groups]
+dev = ["pytest>=7"]
+
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["ego2libero*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# ROS Humble on PYTHONPATH registers pytest plugins that fail to import here.
+addopts = "-p no:launch_testing -p no:launch_ros -p no:ament_pep257 -p no:ament_lint -p no:ament_copyright -p no:ament_flake8 -p no:ament_xmllint"
