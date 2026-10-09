@@ -23,6 +23,7 @@ saturates every core, so batching it buys almost nothing -- about 45-50 env-step
 
 from __future__ import annotations
 
+import contextlib
 import json
 import struct
 import sys
@@ -55,16 +56,20 @@ def _write(f, msg: dict, payload: bytes = b"") -> None:
 
 def main() -> None:
     ckpt = sys.argv[1]
-    from lerobot.policies.factory import make_pre_post_processors
-    from lerobot.policies.smolvla.modeling_smolvla import SmolVLAPolicy
+    device = sys.argv[2] if len(sys.argv) > 2 else "cpu"
+    # stdout is the protocol channel: anything else printed on it corrupts the stream. lerobot and
+    # transformers both print progress to stdout while loading, so send that to stderr instead.
+    with contextlib.redirect_stdout(sys.stderr):
+        from lerobot.policies.factory import make_pre_post_processors
+        from lerobot.policies.smolvla.modeling_smolvla import SmolVLAPolicy
 
-    policy = SmolVLAPolicy.from_pretrained(ckpt)
-    policy.eval()
-    # the checkpoint was saved with device "cuda" baked into its processor steps
-    pre, post = make_pre_post_processors(
-        policy.config, pretrained_path=ckpt,
-        preprocessor_overrides={"device_processor": {"device": "cpu"}},
-        postprocessor_overrides={"device_processor": {"device": "cpu"}})
+        policy = SmolVLAPolicy.from_pretrained(ckpt).to(device)
+        policy.eval()
+        # the checkpoint was saved with device "cuda" baked into its processor steps
+        pre, post = make_pre_post_processors(
+            policy.config, pretrained_path=ckpt,
+            preprocessor_overrides={"device_processor": {"device": device}},
+            postprocessor_overrides={"device_processor": {"device": device}})
 
     inp, outp = sys.stdin.buffer, sys.stdout.buffer
     _write(outp, {"ready": True})

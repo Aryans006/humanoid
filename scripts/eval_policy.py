@@ -60,9 +60,17 @@ class Policy:
         self.p.stdin.flush()
 
     def _recv(self):
-        head = self.p.stdout.readline()
-        if not head:
-            raise RuntimeError("policy server died")
+        # skip any stray non-JSON line: a library that prints to stdout would
+        # otherwise corrupt the protocol stream
+        while True:
+            head = self.p.stdout.readline()
+            if not head:
+                raise RuntimeError("policy server died")
+            try:
+                json.loads(head)
+                break
+            except Exception:
+                sys.stderr.write('[policy server] ' + head.decode(errors='replace'))
         msg = json.loads(head)
         n = msg.get("nbytes", 0)
         buf = b""

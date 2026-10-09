@@ -31,6 +31,7 @@ from __future__ import annotations
 import json
 import os
 import subprocess
+import sys
 from pathlib import Path
 
 import numpy as np
@@ -110,9 +111,17 @@ class BasePolicy:
         self.p.stdin.flush()
 
     def _recv(self):
-        head = self.p.stdout.readline()
-        if not head:
-            raise RuntimeError(f"policy server for {self.checkpoint} died")
+        # skip any stray non-JSON line: a library that prints to stdout would
+        # otherwise corrupt the protocol stream
+        while True:
+            head = self.p.stdout.readline()
+            if not head:
+                raise RuntimeError(f"policy server for {self.checkpoint} died")
+            try:
+                json.loads(head)
+                break
+            except Exception:
+                sys.stderr.write('[policy server] ' + head.decode(errors='replace'))
         msg = json.loads(head)
         n = msg.get("nbytes", 0)
         buf = b""
